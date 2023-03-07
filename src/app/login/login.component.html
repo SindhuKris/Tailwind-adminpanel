@@ -1,0 +1,38 @@
+<div class="flex min-h-full items-center justify-center bg-indigo-900">
+    <div class="space-y-4 p-6 rounded-lg bg-indigo-200">
+        <img class="h-12 mx-auto" src="https://d25hn4jiqx5f7l.cloudfront.net/companies/logos/original/tailwind_1513362838.jpg?1513362838">
+        <h2 class="text-center font-bold text-gray-700 text-2xl">Sign in with</h2>
+        <div class="flex gap-2">
+            <button class="flex gap-1 bg-white mt-2 mb-4 px-5 py-15 rounded-md border-solid border-2 appearance-none shadow-sm focus:ring-2">
+                <img class="h-5" src="https://cdn.iconscout.com/icon/free/png-256/github-163-761603.png">GITHUB
+            </button>
+            <button class="flex gap-1 bg-white mt-2 mb-4 px-5 py-15 rounded-md border-solid border-2 appearance-none shadow-sm focus:ring-2">
+                <img class="h-5" src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">GOOGLE
+            </button>
+        </div>
+        <hr class="h-px my-8 border-0 dark:bg-gray-700">
+        <h3 class="text-center text-gray-500 ">Or sign in with credentials</h3>
+        <form class="space-y-6" [formGroup]="login" (ngSubmit)="Submit()" >
+            <div class="cursor-pointer rounded-md shadow-sm space-y-1">
+                <label for="email" class="text-gray-900 font-bold">EMAIL</label>
+                <input formControlName="email" id="email" type="email" autocomplete="email" class="flex w-full border-2 rounded-b-md px-3 py-2 appearance-none text-gray-300 placeholder-gray-300" placeholder="Email">
+            </div>
+            <div class="cursor-pointer rounded-md shadow-sm space-y-1">
+                <label for="password" class="text-gray-900 font-bold">PASSWORD</label>
+                <input formControlName="password" id="password" type="password" autocomplete="current-password" class="flex w-full border-2 rounded-b-md px-3 py-2 appearance-none text-gray-300 placeholder-gray-300" placeholder="Password">
+            </div>
+            <div class="flex items-center"> 
+                <input formControlName="remember-me" id="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-500 focus:ring-indigo-500">
+                <label for="remember-me" class="ml-2 block text-sm font-bold text-gray-900">Remember me</label>
+            </div>
+            <div class="flex justify-center">
+                <button type="submit" class="rounded-md border-transparent bg-indigo-500 py-2 px-6 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus-ring-offset-2">SIGN IN
+                </button>
+            </div>   
+             
+        </form>
+        
+    </div>  
+    
+  
+</div>

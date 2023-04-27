@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
+ public primaryMenus=["Home","DashBoard", "Design", "Market&Sell", "Reporting", "Support"];
+
+ public secondaryMenus=["Settings", "Notifications", "Apps"];
+ public subMenus=["Courses", "Categories", "Instructors", "Video Library"]
+
 
 }

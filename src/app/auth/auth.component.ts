@@ -45,6 +45,7 @@ export class AuthComponent {
   
 
  ];
+
  hideList: boolean = false;
 
  constructor() { }

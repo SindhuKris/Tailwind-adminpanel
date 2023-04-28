@@ -10,37 +10,44 @@ export class AuthComponent {
   {
     name: 'Home', 
     icon: '',
-    subMenu: []
+    subMenu: [],
+    isOpen: false
   },
   {
     name:'Dashboard',
     icon:'',
-    subMenu: []
+    subMenu: [],
+    isOpen: false
   },
   {
     name:'Content',
     icon:'',
-    subMenu: ['Courses', 'Categories', 'Instructors', 'Video Library']
+    subMenu: ['Courses', 'Categories', 'Instructors', 'Video Library'],
+    isOpen: false
   },
   {
     name:'Design',
     icon:'',
-    subMenu: ['Black Design', 'Light Design', 'Material Design', 'Soft Design']
+    subMenu: ['Black Design', 'Light Design', 'Material Design', 'Soft Design'],
+    isOpen: true
   },
   {
     name:'Market & Sell',
     icon:'',
-    subMenu: ['Marketing', 'Sales', 'Service', 'Operations']
+    subMenu: ['Marketing', 'Sales', 'Service', 'Operations'],
+    isOpen:false
   },
   {
     name:'Reporting',
     icon:'',
-    subMenu: ['Sales Overview', 'Sales Pipeline', 'Sales Trend with Forecast', 'Sales Target']
+    subMenu: ['Sales Overview', 'Sales Pipeline', 'Sales Trend with Forecast', 'Sales Target'],
+    isOpen:false
   },
   {
     name:'Support',
     icon:'',
-    subMenu: ['About Us', 'Contact Us', 'Customer Support']
+    subMenu: ['About Us', 'Contact Us', 'Customer Support'],
+    isOpen:false
   },
   
 
@@ -48,10 +55,12 @@ export class AuthComponent {
 
  hideList: boolean = false;
 
+
+
  constructor() { }
 
-  toggleList(): void {
-    this.hideList = !this.hideList;
+  toggleList(primaryMenu: any): void {
+    primaryMenu.isOpen = !primaryMenu.isOpen;
   }
 
  public secondaryMenus=["Settings", "Notifications", "Apps"];

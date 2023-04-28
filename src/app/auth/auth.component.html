@@ -86,9 +86,9 @@
         <hr class="border-gray-700">
     </div>
     <div class="px-6 pt-4">
-        <ul class="flex flex-col space-y-2" >
+        <ul class="flex flex-col space-y-2"  >
            
-            <li  class="relative text-gray-500  hover:text-white" *ngFor="let primaryMenu of primaryMenus" (click)="toggleList()" >
+            <li  class="relative text-gray-500  hover:text-white" *ngFor="let primaryMenu of primaryMenus"  (click)="toggleList(primaryMenu)" >
                 <div class="relative text-gray-500  hover:text-white flex justify-between">
 
                     <div  class="flex items-center w-full">
@@ -110,15 +110,16 @@
                 
                 </div>  
                 <div class="pt-2 pl-4">
-                    <ul id="dropdown-example"  class=" flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li *ngFor="let subMenu of primaryMenu.subMenu" [ngClass]="{'hidden': hideList}"> 
+                    <ul  id="dropdown-example"  class=" flex-col pl-2 text-gray-500 border-l border-gray-700">
+                        <li  *ngFor="let subMenu of primaryMenu.subMenu"  [ngClass]="{'hidden': !primaryMenu.isOpen}"> 
                             <a
                                 href="#" 
                                 class=" inline-block w-full px-4 py-2 text-xs  transition duration-75 rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                                >{{subMenu}}</a></li>
+                              >{{subMenu}}
+                            </a></li>
                     </ul>
                 </div>     
-            </li>
+            </li> 
            
         </ul>
     </div>

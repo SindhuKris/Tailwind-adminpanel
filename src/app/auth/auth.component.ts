@@ -55,12 +55,16 @@ export class AuthComponent {
 
  hideList: boolean = false;
 
+ open:boolean= false;
 
 
  constructor() { }
 
   toggleList(primaryMenu: any): void {
     primaryMenu.isOpen = !primaryMenu.isOpen;
+  }
+  toggleRightSidenav(){
+    this.open =!this.open;
   }
 
  public secondaryMenus=["Settings", "Notifications", "Apps"];

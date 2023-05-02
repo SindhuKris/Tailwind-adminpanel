@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -8,10 +9,12 @@ import { Component } from '@angular/core';
 export class AuthComponent {
  public primaryMenus=[
   {
-    name: 'Home', 
+    name: 'home', 
     icon: '',
     subMenu: [],
-    isOpen: false
+    isOpen: false,
+    Router:'/home'
+
   },
   {
     name:'Dashboard',
@@ -55,10 +58,14 @@ export class AuthComponent {
 
  hideList: boolean = false;
 
- open:boolean= false;
+ open:boolean = false;
 
 
- constructor() { }
+ constructor(
+
+ ){
+
+  }
 
   toggleList(primaryMenu: any): void {
     primaryMenu.isOpen = !primaryMenu.isOpen;
@@ -67,8 +74,8 @@ export class AuthComponent {
     this.open =!this.open;
   }
 
- public secondaryMenus=["Settings", "Notifications", "Apps"];
- public subMenus=[];
+ public secondaryMenus= ["Settings", "Notifications", "Apps"];
+ public subMenus= [];
 
 
 }

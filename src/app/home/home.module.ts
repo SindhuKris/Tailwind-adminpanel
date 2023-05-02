@@ -7,12 +7,12 @@ const routes: Routes=[
   {
     path: "",
     component:HomeComponent,
-    children: [
-      {
-        path: 'dashboard',
-        loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
-      },
-    ]
+    // children: [
+    //   {
+    //     path: 'dashboard',
+    //     loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule)
+    //   },
+    // ]
   }
 ]
 

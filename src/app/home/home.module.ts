@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes=[
   {
     path: "",
-    component:HomeComponent,
+    component: HomeComponent,
     // children: [
     //   {
     //     path: 'dashboard',

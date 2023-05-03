@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
- public primaryMenus=[
+ public primaryMenus = [
   {
     name: 'home', 
     icon: '',
     subMenu: [],
     isOpen: false,
-    Router:'/home'
+    router:'/home'
 
   },
   {
@@ -61,15 +61,14 @@ export class AuthComponent {
  open:boolean = false;
 
 
- constructor(
-
- ){
+ constructor(){
 
   }
 
   toggleList(primaryMenu: any): void {
     primaryMenu.isOpen = !primaryMenu.isOpen;
   }
+  
   toggleRightSidenav(){
     this.open =!this.open;
   }

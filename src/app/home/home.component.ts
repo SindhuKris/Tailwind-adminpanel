@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  open:boolean = false;
+
+
+  toggleShow(){
+    this.open =!this.open;
+  }
+
+  
 }

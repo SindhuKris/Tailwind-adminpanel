@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
       show: [true],
       right:[true],
       top:[true],
+      center:[false]
     }) 
   }
 

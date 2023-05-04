@@ -1,6 +1,6 @@
  <div class="w-full space-x-2">        
     <div class="place-items-start flex space-x-4">
-        <form [formGroup]= "toggleform" class="flex gap-4">
+        <form [formGroup]= "toggleform" class="flex gap-2">
             <label class="relative inline-flex items-center mb-4 cursor-pointer ">
                 <input type="checkbox" value="" class="sr-only peer"  formControlName= "show"  >
                 <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
@@ -16,11 +16,16 @@
                 <div class="w-11 h-6  bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
                 <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Top</span>
             </label>
+            <label class="relative inline-flex items-center mb-4 cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" formControlName= "center">
+                <div class="w-11 h-6  bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
+                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Center</span>
+            </label>
         </form>   
     </div>
     <div class=" relative p-10 m-2 w-1/3 bg-gray-50 rounded-2xl dark:bg-gray-700 dark:border-gray-600 gap-4 ">
         
-        <div class= "absolute dark:bg-red-900  w-10" [ngClass]= "{'hide':!toggleform.value.show, 'right':toggleform.value.right, 'left':!toggleform.value.right, 'top':toggleform.value.top, 'bottom': !toggleform.value.top}">click</div>
+        <div class= "absolute dark:bg-red-900  w-10" [ngClass]= "{'hide':!toggleform.value.show, 'right':toggleform.value.right, 'left':!toggleform.value.right, 'top':toggleform.value.top, 'bottom': !toggleform.value.top, 'center': toggleform.value.center}">click</div>
     </div>
 
 </div>       

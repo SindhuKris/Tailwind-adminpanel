@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.toggleform= this.fc.group({
       show: [true],
       right:[true],
+      top:[true],
     }) 
   }
 

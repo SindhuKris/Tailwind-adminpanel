@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   public toggleform!: FormGroup;
   open:boolean = false;
 
+
   constructor(
     public fc: FormBuilder
   ){
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.toggleform= this.fc.group({
-      show: [true]
+      show: [true],
+      right:[true],
     }) 
   }
 

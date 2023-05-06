@@ -1,5 +1,5 @@
- <div class="w-full space-x-2">        
-    <div class="place-items-start flex space-x-4">
+ <div class="w-full space-x-2 ">        
+    <div class="place-items-start flex space-x-4 ">
         <form [formGroup]= "toggleform" class="flex gap-2">
             <label class="relative inline-flex items-center mb-4 cursor-pointer ">
                 <input type="checkbox" value="" class="sr-only peer"  formControlName= "show"  >
@@ -22,11 +22,29 @@
                 <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Center</span>
             </label>
         </form>   
+        <div class="flex grow">
+
+        </div>
+        <div class="flex grow  ">
+            <button class=" right-0 top-0 inline-flex " routerLink= "login">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                </svg>
+                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Login</span>
+          
+
+            </button>
+            <button class="">
+
+            </button>
+
+        </div>
     </div>
     <div class=" relative p-10 m-2 w-1/3 bg-gray-50 rounded-2xl dark:bg-gray-700 dark:border-gray-600 gap-4 ">
         
         <div class= "absolute dark:bg-red-900  w-10" [ngClass]= "{'hide':!toggleform.value.show, 'right':toggleform.value.right, 'left':!toggleform.value.right, 'top':toggleform.value.top, 'bottom': !toggleform.value.top, 'center': toggleform.value.center}">click</div>
     </div>
+   <router-outlet></router-outlet>
 
 </div>       
 

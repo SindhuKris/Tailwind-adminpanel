@@ -1,53 +1,8 @@
  <div class="w-full space-x-2 ">        
-    <div class="place-items-start flex space-x-4 ">
-        <form [formGroup]= "toggleform" class="flex gap-2">
-            <label class="relative inline-flex items-center mb-4 cursor-pointer ">
-                <input type="checkbox" value="" class="sr-only peer"  formControlName= "show"  >
-                <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
-                <span class=" ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Show</span>
-            </label>
-            <label class="relative inline-flex items-center mb-4 cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer" formControlName= "right">
-                <div class="w-11 h-6  bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute  after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black" ></div>
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Right</span>
-            </label>
-            <label class="relative inline-flex items-center mb-4 cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer" formControlName= "top">
-                <div class="w-11 h-6  bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Top</span>
-            </label>
-            <label class="relative inline-flex items-center mb-4 cursor-pointer">
-                <input type="checkbox" value="" class="sr-only peer" formControlName= "center">
-                <div class="w-11 h-6  bg-gray-300 rounded-full peer peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-black-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Center</span>
-            </label>
-        </form>   
-        <div class="flex grow">
-
-        </div>
-        <div class="flex grow space-x-4 ">
-            <button class= "right-0 top-0 inline-flex " routerLink= "login">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Login</span>
-          
-
-            </button>
-            <button class="right-0 top-0 inline-flex" routerLink= "register">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
-                </svg>
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Register</span>  
-            </button>
-
-        </div>
-    </div>
-    <div class=" relative p-10 m-2 w-1/3 bg-gray-50 rounded-2xl dark:bg-gray-700 dark:border-gray-600 gap-4 ">
-        
-        <div class= "absolute dark:bg-red-900  w-10" [ngClass]= "{'hide':!toggleform.value.show, 'right':toggleform.value.right, 'left':!toggleform.value.right, 'top':toggleform.value.top, 'bottom': !toggleform.value.top, 'center': toggleform.value.center}">click</div>
-    </div>
-   <router-outlet></router-outlet>
+   
+      
+    
+   
     <div class="flex gap-2 ">
 
     

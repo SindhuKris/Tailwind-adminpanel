@@ -1,20 +1,22 @@
 <div class= "w-full h-screen flex">
     <nav class=" dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href class="flex items-center">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-300">Tailwind Adminpanel</span>
+        <div class="max-w-screen-xl flex  items-center justify-between mx-auto p-2">
+            <a href class="flex ">
+                <span class=" text-2xl font-semibold whitespace-nowrap dark:text-gray-300">Tailwind Adminpanel</span>
+        
+
             </a>
 
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto" >
-                <div class="px-6 pt-4">
-                    <input
-                    type="text"
-                    class="w-full rounded-lg pl-8 pr-20 py-2.5 text-xs font-light bg-gray-800 text-gray-400 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800 "
-                    placeholder="search"
-                    />
+            <form class= "flex items-center">   
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
                 </div>
-                
-            </div>
+            </form>
+            
             <div class="flex space-x-4  ">
                 <button class= "right-0 top-0 inline-flex " routerLink= "login">
                     <svg xmlns= "http://www.w3.org/2000/svg" viewBox= "0 0 24 24" fill= "currentColor" class= "w-6 h-6  text-gray-900 dark:text-gray-300">
@@ -33,55 +35,32 @@
     </nav>
     <div class="w-20% pt-14 ">
         <div class=" h-screen bg-gray-900 rounded-md overflow-y-scroll" [ngClass]="{'w-64': !open, 'w-20':open}">
-            <div class="px-6 pt-8">
-                <div class="flex items-center justify-between">
-                    <a href="#" class="bg-gray-600 p-1.5 rounded flex items-center justify-center focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                        <svg class="w-5 h-5 text-white stroke-current" viewBox="0 0 24 24" fill="none">
-                            <path
-                                d="M12 4.75L19.25 9L12 13.25L4.75 9L12 4.75Z"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            ></path>
-                            <path
-                                d="M9.25 12L4.75 15L12 19.25L19.25 15L14.6722 12"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            ></path>
+            
+            <div class="px-6 pt-8 flex justify-end">
+                <button class="flex  p-0.5 rounded bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 "(click)="toggleRightSidenav()">
+                    <svg 
+                        class="w-3 h-3 text-gray-300 stroke-current"
+                        fill="none"
+                        viewBox="0 0 24 24">
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10.25 6.75L4.75 12L10.25 17.25 "
+                        >
+                        </path>
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19.25 12H5 "
+                        >
+                        </path>
+                    </svg>
+                </button>
 
-
-                        </svg>
-                    
-                    </a>
-                    
-                    <button class="flex items-center justify-center p-0.5 rounded bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 "(click)="toggleRightSidenav()">
-                        <svg 
-                            class="w-3 h-3 text-gray-300 stroke-current"
-                            fill="none"
-                            viewBox="0 0 24 24">
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M10.25 6.75L4.75 12L10.25 17.25 "
-                            >
-                            </path>
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19.25 12H5 "
-                            >
-                            </path>
-                        </svg>
-                    </button>
-
-                </div>
             </div>   
             <div class="px-6 pt-4">
                 <div class="relative">
@@ -90,25 +69,28 @@
             <div class="px-6 pt-4">
                 <hr class="border-gray-700">
             </div>
-            <div class="px-6 pt-4">
-                <ul class="flex flex-col space-y-2"  >
+            <div class=" pt-4" [ngClass]= "{'px-6': !open, 'px-2':open}">
+                <ul class="flex flex-col space-y-2" [ngClass]= "{'px-3':open}"  >
                 
-                    <li  class="relative text-gray-500  hover:text-white" *ngFor="let primaryMenu of primaryMenus"  (click)="toggleList(primaryMenu)"  >
-                        <div class="relative text-gray-500  hover:text-white flex justify-between">
+                    <li  class="relative  text-gray-500  hover:text-white" *ngFor="let primaryMenu of primaryMenus"  (click)="toggleList(primaryMenu)"  >
+                        <div class="relative text-gray-500  hover:text-white flex justify-between ">
 
-                            <div  class="flex items-center w-full" >
+                            <div  class="flex justify-between items-center w-full cursor-pointer bg-gray-800 rounded-lg " >
 
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none" >
                                     <svg class="h-5 w-5 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M14 3v4a1 1 0 0 0 1 1h4" />  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />  <line x1="9" y1="9" x2="10" y2="9" />  <line x1="9" y1="13" x2="15" y2="13" />  <line x1="9" y1="17" x2="15" y2="17" />
                                     </svg>
                                 </div>
-                                <a  [ngClass]= "{'hidden':open}" [routerLink]="primaryMenu.name" 
+                                <a    [routerLink]="primaryMenu.name" 
                                 href="#" 
-                                class="inline-block w-full px-4 py-2 pl-8 pr-4 bg-gray-800 rounded text-sm hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example" sidebar-toggle-item >
-                                {{primaryMenu.name}} 
+                                class="inline-block  px-4 py-2 h-10  pl-8 pr-4  leading-6 rounded text-sm hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"  sidebar-toggle-item >
                                 
+                                <span *ngIf="!open">
+                                    {{primaryMenu.name}} 
+                                </span>
+                                    
                                 </a>
-                                <svg [ngClass]= "{'hidden':open}" sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> 
+                                <svg [ngClass]= "{'hidden':open}" sidebar-toggle-item class="w-6 h-6 pr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> 
 
                                 
                             </div>    
@@ -121,7 +103,11 @@
                                     <a 
                                         href="#" 
                                         class=" inline-block w-full px-4 py-2 text-xs  transition duration-75 rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                                    >{{subMenu}}
+                                    >
+                                    <span *ngIf="!open">
+                                        {{subMenu}}
+                                    </span>
+                                    
                                     </a></li>
                             </ul>
                         </div>     
@@ -133,7 +119,7 @@
                 <hr class="border-gray-700"/>
             </div>
             <div class="px-6 pt-4 pb-8">
-                <ul        >
+                <ul class= "space-y-2"    >
                     <li class=" relative text-gray-500 hover:text-white focus-within:text-white" *ngFor="let secondaryMenu of secondaryMenus">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                             <svg class="h-4 w-4 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />  <circle cx="12" cy="12" r="3" />

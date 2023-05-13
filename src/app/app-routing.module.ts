@@ -10,15 +10,15 @@ const routes: Routes = [
     path:"",
     loadChildren:() => import("./auth/auth.module").then(m=>m.AuthModule)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
-  },
-  {
-    path:"register",
-    loadChildren:() => import("./register/register.module").then(m=>m.RegisterModule)
+  // {
+  //   path: 'login',
+  //   loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  // },
+  // {
+  //   path:"register",
+  //   loadChildren:() => import("./register/register.module").then(m=>m.RegisterModule)
 
-  },
+  // },
 ];
 
 @NgModule({

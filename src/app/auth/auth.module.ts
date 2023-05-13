@@ -24,6 +24,15 @@ const routes: Routes = [
         path:"inbox",
         loadChildren: () => import('../inbox/inbox.module').then(m => m.InboxModule)
       },
+      {
+          path: 'login',
+          loadChildren: () => import('../login/login.module').then(m => m.LoginModule)
+        },
+        {
+          path:"register",
+          loadChildren:() => import("../register/register.module").then(m=>m.RegisterModule)
+      
+        },
     ]
   }
 ]

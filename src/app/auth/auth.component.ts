@@ -52,11 +52,18 @@ export class AuthComponent {
     subMenu: ['About Us', 'Contact Us', 'Customer Support'],
     isOpen:false
   },
+  {
+    name:'Auth Layout',
+    icon:'',
+    subMenu: ['Register', 'Login'],
+    isOpen:false,
+  },
+  
   
 
  ];
 
- hideList: boolean = false;
+ hideList:boolean = false;
 
  open:boolean = false;
 
@@ -71,6 +78,7 @@ export class AuthComponent {
   
   toggleRightSidenav(){
     this.open =!this.open;
+    console.log(1);
   }
 
  public secondaryMenus= ["Settings", "Notifications", "Apps"];

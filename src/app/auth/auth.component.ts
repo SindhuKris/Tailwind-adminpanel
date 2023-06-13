@@ -25,37 +25,37 @@ export class AuthComponent {
   {
     name:'Content',
     icon:'',
-    subMenu: ['Courses', 'Categories', 'Instructors', 'Video Library'],
+    subMenu: [{name:'Courses'}, {name:'Categories'}, {name:'Instructors'}, {name:'Video Library'}],
     isOpen: false
   },
   {
     name:'Design',
     icon:'',
-    subMenu: ['Black Design', 'Light Design', 'Material Design', 'Soft Design'],
+    subMenu: [{name:'Black Design'}, {name:'Light Design'}, {name:'Material Design'},{name: 'Soft Design'}],
     isOpen: true
   },
   {
     name:'Market & Sell',
     icon:'',
-    subMenu: ['Marketing', 'Sales', 'Service', 'Operations'],
+    subMenu: [{name:'Marketing'}, {name:'Sales'}, {name:'Service'},{name: 'Operations'}],
     isOpen:false
   },
   {
     name:'Reporting',
     icon:'',
-    subMenu: ['Sales Overview', 'Sales Pipeline', 'Sales Trend with Forecast', 'Sales Target'],
+    subMenu: [{name:'Sales Overview'}, {name:'Sales Pipeline'},{name:'Sales Trend with Forecast'},{name: 'Sales Target'}],
     isOpen:false
   },
   {
     name:'Support',
     icon:'',
-    subMenu: ['About Us', 'Contact Us', 'Customer Support'],
+    subMenu: [{name:'About Us'},{name: 'Contact Us'},{name:'Customer Support'}],
     isOpen:false
   },
   {
     name:'Auth Layout',
     icon:'',
-    subMenu: ['Register', 'Login'],
+    subMenu: [{name:'Register', router:'/register'}, {name:'Login', router:'/login' }],
     isOpen:false,
   },
   

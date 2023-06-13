@@ -3,15 +3,12 @@
         <div class=" flex items-centre  justify-between mx-auto p-2">
             <a  class="flex items-centre pr-2 space-x-2">
                 <span class= "text-xl leading-10 font-semibold whitespace-nowrap dark:text-gray-300">Tailwind Adminpanel</span>
-
                 <button class="space-y-2 " (click)="toggleRightSidenav()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class= "w-6 h-6 dark:text-gray-300">
                         <path fill-rule="evenodd" d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
                     </svg>
                 </button>
-            </a>
-
-           
+            </a>         
 
             <form class= "flex items-center">   
                 <label for="simple-search" class="sr-only">Search</label>
@@ -73,12 +70,10 @@
 
                                 
                             </div>    
-
-                        
                         </div>  
                         <div class="pt-2 pl-4">
                             <ul  id="dropdown-example"  class=" flex-col pl-2 text-gray-500 border-l border-gray-700">
-                                <li  *ngFor="let subMenu of primaryMenu.subMenu"  [ngClass]="{'hidden': !primaryMenu.isOpen}"> 
+                                <li  *ngFor="let subMenu of primaryMenu.subMenu"  [ngClass]="{'hidden': !primaryMenu.isOpen}" >
 
                                     <div class="flex justify-between pl-1" >
 
@@ -87,12 +82,12 @@
                                         </svg>
                                     
                                         
-                                        <a [routerLink]="primaryMenu.subMenu"
+                                        <a [routerLink]="subMenu.name"
                                             href="#" 
                                             class=" inline-block w-full px-4 py-2 text-xs  transition duration-75 rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
                                         >
-                                        <span *ngIf="!open">
-                                            {{subMenu}}
+                                        <span *ngIf="!open"> 
+                                            {{subMenu.name}}
                                         </span>
                                         
                                         </a>
